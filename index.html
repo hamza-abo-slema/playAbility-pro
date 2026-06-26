@@ -161,6 +161,19 @@
     .contact-icon svg{width:28px;height:28px;color:#00bcd4}
     .contact-card h3{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:8px}
     .contact-card p{color:#00bcd4;font-size:.95rem;word-break:break-all}
+    .lightbox{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background:rgba(0,0,0,.92);cursor:pointer;align-items:center;justify-content:center}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:92vw;max-height:92vh;border-radius:8px;box-shadow:0 0 60px rgba(0,0,0,.6);cursor:default}
+    .lightbox-close{position:absolute;top:20px;right:30px;font-size:2.5rem;color:#fff;cursor:pointer;transition:color .2s;background:none;border:none;line-height:1}
+    .lightbox-close:hover{color:#00bcd4}
+    .lightbox-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);color:#fff;border:none;width:56px;height:56px;border-radius:50%;cursor:pointer;font-size:2rem;display:flex;align-items:center;justify-content:center;transition:all .2s}
+    .lightbox-arrow:hover{background:rgba(0,188,212,.6)}
+    .lightbox-arrow.prev{left:20px}
+    .lightbox-arrow.next{right:20px}
+    @media(max-width:768px){
+      .lightbox-arrow{width:44px;height:44px;font-size:1.4rem}
+      .lightbox-close{top:12px;right:16px;font-size:2rem}
+    }
     footer{border-top:1px solid #222;padding:24px 20px;text-align:center;color:#555;font-size:.85rem}
 
     @media(max-width:1024px){.hero-name{font-size:2.8rem}}
@@ -218,14 +231,14 @@
           <img src="radio.png" alt="" loading="lazy" />
           <img src="side menu.png" alt="" loading="lazy" />
         </div>
-        <button class="slider-arrow prev" id="sliderPrev">&#8250;</button>
-        <button class="slider-arrow next" id="sliderNext">&#8249;</button>
+        <button class="slider-arrow prev" id="sliderPrev" aria-label="Previous slide">&#8250;</button>
+        <button class="slider-arrow next" id="sliderNext" aria-label="Next slide">&#8249;</button>
       </div>
       <div class="slider-dots" id="sliderDots">
-        <button class="slider-dot active" data-index="0"></button>
-        <button class="slider-dot" data-index="1"></button>
-        <button class="slider-dot" data-index="2"></button>
-        <button class="slider-dot" data-index="3"></button>
+        <button class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
+        <button class="slider-dot" data-index="1" aria-label="Slide 2"></button>
+        <button class="slider-dot" data-index="2" aria-label="Slide 3"></button>
+        <button class="slider-dot" data-index="3" aria-label="Slide 4"></button>
       </div>
     </div>
   </section>
@@ -367,6 +380,13 @@
     </div>
   </section>
 
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Image preview">
+    <button class="lightbox-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lightbox-arrow prev" id="lbPrev" aria-label="Previous image">&#8249;</button>
+    <img src="" alt="" id="lbImg" />
+    <button class="lightbox-arrow next" id="lbNext" aria-label="Next image">&#8250;</button>
+  </div>
+
   <footer><span data-key="footer">&copy; 2026 playAbility Pro. جميع الحقوق محفوظة.</span></footer>
 
   <script>
@@ -449,6 +469,42 @@ if('IntersectionObserver'in window){
   document.querySelectorAll('.fade-section:not(.visible)').forEach(function(el){obs.observe(el);});
 }else{
   document.querySelectorAll('.fade-section').forEach(function(el){el.classList.add('visible');});
+}
+
+var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbClose=document.getElementById('lbClose');
+var lbPrev=document.getElementById('lbPrev'),lbNext=document.getElementById('lbNext');
+var sliderImgs=document.querySelectorAll('.slider-track img');
+var lbIdx=0;
+
+sliderImgs.forEach(function(img,i){
+  img.style.cursor='pointer';
+  img.addEventListener('click',function(e){
+    e.stopPropagation();
+    lbIdx=i;
+    lbImg.src=img.getAttribute('src');
+    lb.classList.add('open');
+    clearInterval(as);
+  });
+});
+
+lb.addEventListener('click',function(e){if(e.target===lb){closeLb();}});
+lbClose.addEventListener('click',closeLb);
+document.addEventListener('keydown',function(e){
+  if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')closeLb();
+  if(e.key==='ArrowLeft')lbNav(-1);
+  if(e.key==='ArrowRight')lbNav(1);
+});
+lbPrev.addEventListener('click',function(e){e.stopPropagation();lbNav(-1);});
+lbNext.addEventListener('click',function(e){e.stopPropagation();lbNav(1);});
+
+function closeLb(){
+  lb.classList.remove('open');
+  as=setInterval(function(){gs((cs+1)%ts);},4000);
+}
+function lbNav(d){
+  lbIdx=(lbIdx+d+sliderImgs.length)%sliderImgs.length;
+  lbImg.src=sliderImgs[lbIdx].getAttribute('src');
 }
   </script>
 </body>

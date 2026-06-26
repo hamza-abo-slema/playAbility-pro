@@ -477,9 +477,7 @@ var sliderImgs=document.querySelectorAll('.slider-track img');
 var lbIdx=0;
 
 sliderImgs.forEach(function(img,i){
-  img.style.cursor='pointer';
-  img.addEventListener('click',function(e){
-    e.stopPropagation();
+  img.addEventListener('mouseenter',function(){
     lbIdx=i;
     lbImg.src=img.getAttribute('src');
     lb.classList.add('open');
@@ -500,7 +498,7 @@ lbNext.addEventListener('click',function(e){e.stopPropagation();lbNav(1);});
 
 function closeLb(){
   lb.classList.remove('open');
-  as=setInterval(function(){gs((cs+1)%ts);},4000);
+  ra();
 }
 function lbNav(d){
   lbIdx=(lbIdx+d+sliderImgs.length)%sliderImgs.length;

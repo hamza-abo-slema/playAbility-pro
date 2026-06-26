@@ -21,12 +21,8 @@
   <meta name="twitter:image" content="https://hamza-abo-slema.github.io/playAbility-pro/main.png" />
   <link rel="alternate" hreflang="ar" href="https://hamza-abo-slema.github.io/playAbility-pro/" />
   <link rel="alternate" hreflang="en" href="https://hamza-abo-slema.github.io/playAbility-pro/" />
-  <link rel="alternate" hreflang="fr" href="https://hamza-abo-slema.github.io/playAbility-pro/" />
-  <link rel="alternate" hreflang="de" href="https://hamza-abo-slema.github.io/playAbility-pro/" />
-  <link rel="alternate" hreflang="it" href="https://hamza-abo-slema.github.io/playAbility-pro/" />
-  <link rel="alternate" hreflang="es" href="https://hamza-abo-slema.github.io/playAbility-pro/" />
-  <link rel="alternate" hreflang="tr" href="https://hamza-abo-slema.github.io/playAbility-pro/" />
   <link rel="alternate" hreflang="x-default" href="https://hamza-abo-slema.github.io/playAbility-pro/" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -109,6 +105,26 @@
     .slider-arrow.prev{right:12px}
     .slider-arrow.next{left:12px}
 
+    .about-intro{text-align:center;font-size:1.15rem;color:#aaa;max-width:700px;margin:0 auto 50px;line-height:1.8}
+    .features-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:40px}
+    .feature-card{
+      background:rgba(26,26,26,.85);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px 20px;
+      text-align:center;transition:all .3s
+    }
+    .feature-card:hover{border-color:rgba(0,188,212,.2);transform:translateY(-3px)}
+    .feature-card i{font-size:2rem;color:#00bcd4;margin-bottom:12px}
+    .feature-card h4{color:#fff;font-size:.95rem;font-weight:700;margin-bottom:6px}
+    .feature-card p{color:#888;font-size:.85rem;line-height:1.5}
+    .about-access{background:rgba(0,188,212,.05);border:1px solid rgba(0,188,212,.15);border-radius:16px;padding:28px 24px;text-align:center;margin-bottom:30px}
+    .about-access i{font-size:2rem;color:#00bcd4;margin-bottom:10px}
+    .about-access h4{color:#00bcd4;font-size:1.05rem;font-weight:700;margin-bottom:6px}
+    .about-access p{color:#aaa;font-size:.9rem;line-height:1.6}
+    .learn-more{
+      display:inline-flex;align-items:center;gap:8px;color:#00bcd4;font-weight:700;font-size:1.05rem;
+      padding:12px 28px;border:2px solid #00bcd4;border-radius:50px;transition:all .3s
+    }
+    .learn-more:hover{background:#00bcd4;color:#121212}
+    .learn-more-wrap{text-align:center;margin-top:10px}
     .about-text p,.about-text li{color:#ccc;line-height:1.9;font-size:1.05rem;margin-bottom:18px;text-align:justify}
     .about-text h2{color:#00bcd4;font-size:1.5rem;margin:40px 0 16px;font-weight:700}
     .about-text h3{color:#00bcd4;font-size:1.25rem;margin:32px 0 12px;font-weight:700}
@@ -116,30 +132,21 @@
     .about-text li{margin-bottom:8px}
     .about-text code{background:rgba(0,188,212,.1);color:#4dd0e1;padding:2px 8px;border-radius:4px;font-size:.9rem}
     .about-text strong{color:#fff}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
     [class*="lang-block"]{display:none}
     body.lang-ar .lang-block-ar{display:block}
     body.lang-en .lang-block-en{display:block}
-    body.lang-fr .lang-block-fr{display:block}
-    body.lang-de .lang-block-de{display:block}
-    body.lang-it .lang-block-it{display:block}
-    body.lang-es .lang-block-es{display:block}
-    body.lang-tr .lang-block-tr{display:block}
     [class*="lang-i"]{display:none}
     body.lang-ar .lang-i-ar{display:inline}
     body.lang-en .lang-i-en{display:inline}
-    body.lang-fr .lang-i-fr{display:inline}
-    body.lang-de .lang-i-de{display:inline}
-    body.lang-it .lang-i-it{display:inline}
-    body.lang-es .lang-i-es{display:inline}
-    body.lang-tr .lang-i-tr{display:inline}
 
     .download{background:#121212;text-align:center}
     .btn-download{
       display:inline-flex;flex-direction:column;align-items:center;gap:6px;padding:20px 48px;font-size:1.2rem;font-weight:700;
-      color:#fff;background:linear-gradient(135deg,#00bcd4,#0097a7);border:none;border-radius:50px;
-      cursor:pointer;transition:all .3s ease;box-shadow:0 0 40px rgba(0,188,212,.3);font-family:inherit
+      color:#fff;background:linear-gradient(135deg,#2ecc71,#27ae60);border:none;border-radius:50px;
+      cursor:pointer;transition:all .3s ease;box-shadow:0 0 40px rgba(46,204,113,.3);font-family:inherit
     }
-    .btn-download:hover{transform:scale(1.05);box-shadow:0 0 60px rgba(0,188,212,.5)}
+    .btn-download:hover{transform:scale(1.05);box-shadow:0 0 60px rgba(46,204,113,.5)}
     .btn-download small{font-size:.85rem;font-weight:400;opacity:.85}
     .download-note{color:#666;font-size:.9rem;margin-top:20px}
     .loading-msg{color:#888;font-size:.9rem;margin-top:12px}
@@ -177,25 +184,22 @@
       <div class="nav-links" id="navLinks">
         <a href="#hero" data-key="nav_home">الرئيسي</a>
         <a href="#about" data-key="nav_about">عن البرنامج</a>
+        <a href="docs.html" data-key="nav_docs">التوثيق</a>
         <a href="#download" data-key="nav_download">التحميل</a>
         <a href="#contact" data-key="nav_contact">التواصل</a>
       </div>
       <div style="display:flex;align-items:center;gap:8px">
-        <select class="lang-select" id="langSelect">
+        <select class="lang-select" id="langSelect" aria-label="اختر اللغة">
           <option value="ar">العربية</option>
           <option value="en">English</option>
-          <option value="fr">Fran&ccedil;ais</option>
-          <option value="de">Deutsch</option>
-          <option value="it">Italiano</option>
-          <option value="es">Espa&ntilde;ol</option>
-          <option value="tr">T&uuml;rk&ccedil;e</option>
         </select>
-        <button class="menu-btn" id="menuBtn"><span></span><span></span><span></span></button>
+        <button class="menu-btn" id="menuBtn" aria-label="القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="#hero" data-key="nav_home">الرئيسي</a>
       <a href="#about" data-key="nav_about">عن البرنامج</a>
+      <a href="docs.html" data-key="nav_docs">التوثيق</a>
       <a href="#download" data-key="nav_download">التحميل</a>
       <a href="#contact" data-key="nav_contact">التواصل</a>
     </div>
@@ -231,216 +235,97 @@
       <div class="about-text">
 
 <div class="lang-block-ar" lang="ar">
-<h3>&#127916; playAbility pro: كيف حوّلتُ مشغل ميديا بسيط إلى استوديو متكامل</h3>
-<p>عندما بدأت في كتابة السطور الأولى من كود playAbility pro، لم تكن رؤيتي مجرد تصميم مشغل فيديو آخر. كان هدفي بناء بيئة عمل، أو بالأصح استوديو مصغر، يحل مشاكل حقيقية تواجهنا يومياً؛ سواء كنت صانع محتوى يبحث عن أداة مونتاج سريعة، أو مستخدماً عادياً يريد الاستمتاع باليوتيوب والراديو بدون مشتتات، أو مستخدماً من المكفوفين وضعاف البصر يبحث عن برنامج يتحدث لغته ويفهم احتياجاته بنسبة 100%.</p>
-<p>بعد شهور من التطوير، أضع بين أيديكم <strong>playAbility pro</strong>: البرنامج الذي يجمع 10 أدوات احترافية في مكان واحد، وبموارد تكاد لا تُذكر من جهازك.</p>
-<h2>&#128640; 1. محرك تشغيل لا يعرف المستحيل (MPV Engine)</h2>
-<ul>
-<li><strong>تسريع العتاد:</strong> يعتمد على كارت الشاشة (GPU) لمعالجة الفيديوهات الثقيلة (4K و 8K) بسلاسة.</li>
-<li><strong>تضخيم الصوت الخارق:</strong> باستخدام <code>سهم لأعلى/لأسفل</code> تتحكم بالصوت، ومع <code>Shift + سهم لأعلى</code> ترفع الصوت حتى <strong>400%</strong>.</li>
-<li><strong>دقة الإطارات:</strong> اضغط <code>Alt + سهم يمين/يسار</code> للتقدم أو الرجوع إطاراً واحداً، واحفظ الإطار كصورة بـ <code>Ctrl + S</code>.</li>
-<li><strong>التحكم بالسرعة:</strong> <code>Ctrl + سهم يمين</code> للتسريع، <code>Ctrl + سهم يسار</code> للتبطيء، <code>Ctrl + Space</code> للسرعة الطبيعية.</li>
-</ul>
-<h2>&#9986;&#65039; 2. سلة المونتاج والقص الذكي (Lossless Trimming)</h2>
-<ul>
-<li><strong>تحديد A/B:</strong> اضغط <code>Shift + P</code> عند البداية (A) وعند النهاية (B). <code>Escape</code> للإلغاء.</li>
-<li><strong>سلة القص الجماعي:</strong> <code>Alt + B</code> للإضافة للسلة، <code>Alt + Shift + B</code> لتفريغ السلة.</li>
-<li><strong>إدارة السلة:</strong> اضغط <code>Alt + S</code> لفتح المدير، وراجع المقاطع، وصدّرها منفصلة أو ادمجها في ملف واحد.</li>
-<li><strong>دقة متناهية:</strong> <code>Ctrl + Shift + أسهم</code> للنقطة A، <code>Alt + Shift + أسهم</code> للنقطة B.</li>
-</ul>
-<h2>&#127760; 3. يوتيوب في جيبك (Mighty YouTube)</h2>
-<ul>
-<li>واجهة يوتيوب متكاملة تفتحها بـ <code>Ctrl + Y</code> — ابحث، صفّي النتائج، وتصفح دون إعلانات.</li>
-<li>طابور تحميل ذكي: <code>Ctrl + Q</code> للإضافة، اختر الجودة (144p حتى 1080p، أو WAV/FLAC/MP3).</li>
-<li>إدارة الاشتراكات محلياً دون تسجيل دخول.</li>
-</ul>
-<h2>&#128209; 4. الإدارة الشاملة للفصول (Chapters)</h2>
-<ul>
-<li><code>Alt + Page Down/Up</code> للقفز بين الفصول.</li>
-<li><code>Ctrl + H</code> لعرض قائمة الفصول.</li>
-<li><code>Ctrl + Shift + C</code> لتقسيم الفيديو إلى ملفات منفصلة بناءً على فصوله.</li>
-</ul>
-<h2>&#128251; 5. راديو عالمي ومسجل جدولة أوتوماتيكي</h2>
-<ul>
-<li>نافذة الراديو <code>Ctrl + R</code> — تصفح آلاف الإذاعات منظمة في تبويبات.</li>
-<li>التسجيل المباشر وحفظ البث كملف MP3.</li>
-<li>الجدولة الذكية: برمج المحطة والوقت والمدة، والبرنامج يسجل نيابة عنك.</li>
-</ul>
-<h2>&#128065;&#65039; 6. إمكانية الوصول التامة (Accessibility)</h2>
-<ul>
-<li>تواصل برمجي مع قارئات الشاشة (NVDA) — ينطق اسم الملف، النسبة، حالة التشغيل.</li>
-<li>نطق الوقت الإجمالي <code>Ctrl + T</code> والوقت الحالي <code>Ctrl + Shift + T</code>.</li>
-<li>قراءة الترجمة المدمجة تزامناً مع الفيديو <code>Ctrl + Shift + S</code>.</li>
-<li>واجهة الشروحات النظيفة <code>Alt + H</code> لإخفاء القوائم.</li>
-</ul>
-<h2>&#128476; 7. سيطرة مطلقة على الترجمات</h2>
-<ul>
-<li>بحث تلقائي: <code>Ctrl + Alt + S</code> — يبحث عن ترجمة عبر OpenSubtitles ويحمّلها ويشغّلها.</li>
-<li>تبديل سريع بين لغات الترجمة <code>Shift + S</code>.</li>
-<li>استخراج الترجمة المدمجة وحفظها كملف SRT.</li>
-</ul>
-<h2>&#128194; 8. العلامات المرجعية، القوائم، واستئناف التشغيل</h2>
-<ul>
-<li><strong>العلامات المرجعية:</strong> <code>Ctrl + M</code> للحفظ باسم، <code>Ctrl + Shift + M</code> للقفز إليها.</li>
-<li><strong>القائمة الجانبية:</strong> <code>Ctrl + L</code> — قوائم M3U مخصصة مع إعادة ترتيب.</li>
-<li><strong>استئناف التشغيل:</strong> اغلق البرنامج وافتحه مجدداً — سيبدأ من نفس الثانية.</li>
-</ul>
-<h2>&#9881;&#65039; 9. التخصيص، المؤثرات، والراحة المطلقة!</h2>
-<ul>
-<li><strong>اختصارات مرنة:</strong> من الإعدادات (<code>Ctrl + P</code>) غيّر كل الاختصارات.</li>
-<li><strong>المؤثرات الصوتية:</strong> <code>Shift + F</code> — إيكولايزر بـ 9 ترددات، صدى (Reverb)، ومعالجة ديناميكية.</li>
-<li><strong>مؤقت النوم:</strong> <code>Alt + T</code> — بعد انتهاء الوقت يغلق البرنامج نفسه بأمان.</li>
-</ul>
-<h3>&#128161; الكلمة الأخيرة:</h3>
-<p><strong>playAbility pro</strong> ليس مجرد أداة، بل استجابة فعلية لاحتياجاتنا اليومية. إنه يغنيك عن تثبيت برنامج مونتاج للقص، وبرنامج آخر للتحميل من يوتيوب، وتطبيق للراديو، ومشغل ميديا منفصل. كل هذا في بيئة واحدة، خفيفة، وسريعة، وتتحدث لغتك.</p>
-<p><strong>هل أنت مستعد لنقل تجربتك في استهلاك وإنتاج الميديا إلى مستوى آخر؟</strong></p>
-<p style="margin-top:20px">البرنامج يدعم ميزة التحديث التلقائي داخلياً، لتبقى دائماً على أحدث إصدار!</p>
+<p class="about-intro"><strong>playAbility Pro</strong> ليس مجرد مشغل ميديا — إنه استوديو متكامل يجمع 10 أدوات احترافية في برنامج واحد خفيف وسريع. شغّل فيديوهات 4K/8K، قصّها بدون فقدان الجودة، حمّل من يوتيوب، استمع للراديو، وسجّل البث — كل هذا بواجهة واحدة وموارد ضئيلة.</p>
+
+<div class="features-grid">
+  <div class="feature-card">
+    <i class="fas fa-play-circle" aria-hidden="true"></i>
+    <h4>محرك MPV</h4>
+    <p>تشغيل 4K/8K مع تسريع GPU وتحكم كامل بالسرعة والصوت حتى 400%</p>
+  </div>
+  <div class="feature-card">
+    <i class="fas fa-cut" aria-hidden="true"></i>
+    <h4>قص بدون خسارة</h4>
+    <p>تحديد A/B، سلة مونتاج جماعي، تصدير بمقاطع منفصلة أو مدمجة</p>
+  </div>
+  <div class="feature-card">
+    <i class="fab fa-youtube" aria-hidden="true"></i>
+    <h4>يوتيوب مدمج</h4>
+    <p>بحث، تحميل (144p-1080p, WAV/FLAC/MP3)، وإدارة اشتراكات</p>
+  </div>
+  <div class="feature-card">
+    <i class="fas fa-list" aria-hidden="true"></i>
+    <h4>إدارة الفصول</h4>
+    <p>قفز بين الفصول، تقسيم الفيديو تلقائياً حسب الفصول</p>
+  </div>
+  <div class="feature-card">
+    <i class="fas fa-broadcast-tower" aria-hidden="true"></i>
+    <h4>راديو عالمي</h4>
+    <p>آلاف الإذاعات، تسجيل مباشر MP3، جدولة ذكية للتسجيل</p>
+  </div>
+  <div class="feature-card">
+    <i class="fas fa-sliders-h" aria-hidden="true"></i>
+    <h4>مؤثرات صوتية</h4>
+    <p>إيكولايزر 9 ترددات، صدى (Reverb)، ومعالجة ديناميكية</p>
+  </div>
+</div>
+
+<div class="about-access">
+  <i class="fas fa-universal-access" aria-hidden="true"></i>
+  <h4>إمكانية وصول تامة للمكفوفين وضعاف البصر</h4>
+  <p>تواصل كامل مع قارئات الشاشة NVDA — ينطق اسم الملف، نسبة الصوت، حالة التشغيل، الوقت، وأكثر. واجهة نظيفة مع اختصارات لوحة مفاتيح شاملة تمنحك تحرّراً كاملاً عن الماوس. هذا البرنامج صُمم ليكون في متناول الجميع دون استثناء.</p>
+</div>
+
+<div class="learn-more-wrap">
+  <a href="docs.html" class="learn-more">تعرف على المزيد عن البرنامج <i class="fas fa-arrow-left" aria-hidden="true"></i></a>
+</div>
 </div>
 
 <div class="lang-block-en" lang="en">
-<h3>&#127916; playAbility Pro: How I turned a media player into a complete studio</h3>
-<p>When I wrote the first lines of playAbility Pro code, my vision was not just another video player. It was a mini-studio solving real daily problems for content creators, casual users, and blind users needing a fully accessible app.</p>
-<p>After months of development, I present <strong>playAbility Pro</strong>: 10 professional tools in one place using minimal system resources.</p>
-<h2>&#128640; 1. MPV Engine</h2>
-<ul>
-<li><strong>Hardware Acceleration:</strong> GPU for smooth 4K/8K playback.</li>
-<li><strong>Super Volume Boost:</strong> <code>Up/Down</code> for volume, <code>Shift + Up</code> boosts to <strong>400%</strong>.</li>
-<li><strong>Frame by Frame:</strong> <code>Alt + Left/Right</code> for frame nav, <code>Ctrl + S</code> to save.</li>
-<li><strong>Speed Control:</strong> <code>Ctrl + Right/Left</code> speed up/down, <code>Ctrl + Space</code> normal.</li>
-</ul>
-<h2>&#9986;&#65039; 2. Lossless Trimming</h2>
-<ul>
-<li><strong>A/B Marking:</strong> <code>Shift + P</code> at A and B. <code>Escape</code> to clear.</li>
-<li><strong>Batch Cut Bin:</strong> <code>Alt + B</code> add, <code>Alt + Shift + B</code> clear.</li>
-<li><strong>Bin Manager:</strong> <code>Alt + S</code> opens manager, export or merge.</li>
-</ul>
-<h2>&#127760; 3. Mighty YouTube</h2>
-<ul>
-<li>Integrated YouTube: <code>Ctrl + Y</code>. Search, filter, no ads.</li>
-<li>Smart queue: <code>Ctrl + Q</code>, quality 144p-1080p, WAV/FLAC/MP3.</li>
-<li>Local subscriptions no login needed.</li>
-</ul>
-<h2>&#128209; 4. Chapters Management</h2>
-<ul>
-<li><code>Alt + Page Down/Up</code> jump chapters.</li>
-<li><code>Ctrl + H</code> show list, <code>Ctrl + Shift + C</code> split into files.</li>
-</ul>
-<h2>&#128251; 5. Global Radio &amp; Scheduler</h2>
-<ul>
-<li><code>Ctrl + R</code> opens radio: thousands of stations.</li>
-<li>Live recording as MP3. Smart scheduler records for you.</li>
-</ul>
-<h2>&#128065;&#65039; 6. Full Accessibility</h2>
-<ul>
-<li>NVDA integration, speaks everything.</li>
-<li>Duration <code>Ctrl + T</code>, current time <code>Ctrl + Shift + T</code>.</li>
-<li>Read subtitles <code>Ctrl + Shift + S</code>. Clean UI <code>Alt + H</code>.</li>
-</ul>
-<h2>&#128476; 7. Subtitles Control</h2>
-<ul>
-<li>Auto search: <code>Ctrl + Alt + S</code> searches OpenSubtitles.</li>
-<li>Cycle languages <code>Shift + S</code>. Extract embedded as SRT.</li>
-</ul>
-<h2>&#128194; 8. Bookmarks, Playlists &amp; Resume</h2>
-<ul>
-<li><code>Ctrl + M</code> save bookmark, <code>Ctrl + Shift + M</code> jump.</li>
-<li><code>Ctrl + L</code> playlist, custom M3U. Resume from exact second.</li>
-</ul>
-<h2>&#9881;&#65039; 9. Customization &amp; Effects</h2>
-<ul>
-<li>Settings <code>Ctrl + P</code> to customize shortcuts.</li>
-<li><code>Shift + F</code> audio effects: 9-band EQ, Reverb, dynamics.</li>
-<li><code>Alt + T</code> sleep timer safely shuts down.</li>
-</ul>
-<h3>&#128161; Final Word:</h3>
-<p><strong>playAbility Pro</strong> replaces a media player, video editor, YouTube downloader, and radio app in one lightweight accessible package.</p>
-<p><strong>Ready to take your media experience to the next level?</strong></p>
-<p style="margin-top:20px">Built-in auto-update, always on the latest version!</p>
+<p class="about-intro"><strong>playAbility Pro</strong> is more than a media player — it's a full studio packed with 10 professional tools in one lightweight, fast app. Play 4K/8K videos, losslessly trim, download from YouTube, listen to radio, record streams — all in one UI with minimal resources.</p>
+
+<div class="features-grid">
+  <div class="feature-card">
+    <i class="fas fa-play-circle" aria-hidden="true"></i>
+    <h4>MPV Engine</h4>
+    <p>4K/8K playback with GPU acceleration, speed control &amp; volume boost up to 400%</p>
+  </div>
+  <div class="feature-card">
+    <i class="fas fa-cut" aria-hidden="true"></i>
+    <h4>Lossless Trimming</h4>
+    <p>A/B marking, batch cut bin, export as separate clips or merged file</p>
+  </div>
+  <div class="feature-card">
+    <i class="fab fa-youtube" aria-hidden="true"></i>
+    <h4>Built-in YouTube</h4>
+    <p>Search, download (144p-1080p, WAV/FLAC/MP3), manage subscriptions</p>
+  </div>
+  <div class="feature-card">
+    <i class="fas fa-list" aria-hidden="true"></i>
+    <h4>Chapters</h4>
+    <p>Jump between chapters, auto-split video by chapters</p>
+  </div>
+  <div class="feature-card">
+    <i class="fas fa-broadcast-tower" aria-hidden="true"></i>
+    <h4>Global Radio</h4>
+    <p>Thousands of stations, live MP3 recording, smart scheduler</p>
+  </div>
+  <div class="feature-card">
+    <i class="fas fa-sliders-h" aria-hidden="true"></i>
+    <h4>Audio Effects</h4>
+    <p>9-band EQ, Reverb, and dynamic audio processing</p>
+  </div>
 </div>
 
-<div class="lang-block-fr" lang="fr">
-<h3>&#127916; playAbility Pro: un studio complet dans un seul lecteur</h3>
-<p>playAbility Pro combine <strong>10 outils professionnels</strong> en une seule application l&eacute;g&egrave;re et accessible.</p>
-<ul>
-<li><strong>Moteur MPV</strong> &mdash; acc&eacute;l&eacute;ration GPU, amplification 400%, image par image.</li>
-<li><strong>Montage sans perte</strong> &mdash; d&eacute;coupage A/B, corbeille, fusion.</li>
-<li><strong>YouTube int&eacute;gr&eacute;</strong> &mdash; recherche, t&eacute;l&eacute;chargement 144p-1080p, WAV/FLAC/MP3.</li>
-<li><strong>Chapitres</strong> &mdash; navigation et d&eacute;coupage.</li>
-<li><strong>Radio mondiale</strong> &mdash; milliers de stations, enregistrement, programmation.</li>
-<li><strong>Accessibilit&eacute;</strong> &mdash; compatible NVDA, synth&egrave;se vocale.</li>
-<li><strong>Sous-titres</strong> &mdash; recherche auto, extraction SRT.</li>
-<li><strong>Signets et listes</strong> &mdash; M3U, reprise.</li>
-<li><strong>Personnalisation</strong> &mdash; raccourcis, EQ 9 bandes, minuterie.</li>
-</ul>
-<p><em>Voir version arabe ou anglaise pour la description compl&egrave;te.</em></p>
+<div class="about-access">
+  <i class="fas fa-universal-access" aria-hidden="true"></i>
+  <h4>Full Accessibility for Blind &amp; Visually Impaired Users</h4>
+  <p>Complete NVDA screen reader integration — announces file names, volume level, playback status, time, and more. Clean UI with comprehensive keyboard shortcuts giving you full mouse-free control. This app was designed for everyone, without exception.</p>
 </div>
 
-<div class="lang-block-de" lang="de">
-<h3>&#127916; playAbility Pro: ein komplettes Studio in einer App</h3>
-<p>playAbility Pro vereint <strong>10 professionelle Werkzeuge</strong> in einer leichten, barrierefreien Anwendung.</p>
-<ul>
-<li><strong>MPV-Engine</strong> &mdash; GPU-Beschleunigung, 400% Verst&auml;rkung, Einzelbild.</li>
-<li><strong>Verlustfreier Schnitt</strong> &mdash; A/B-Markierung, Korb, Zusammenf&uuml;hrung.</li>
-<li><strong>YouTube integriert</strong> &mdash; Suche, Download 144p-1080p, WAV/FLAC/MP3.</li>
-<li><strong>Kapitelverwaltung</strong> &mdash; Navigation und Aufteilung.</li>
-<li><strong>Weltradio</strong> &mdash; tausende Sender, Aufnahme, Zeitplanung.</li>
-<li><strong>Barrierefreiheit</strong> &mdash; NVDA-kompatibel, Sprachausgabe.</li>
-<li><strong>Untertitel</strong> &mdash; automatische Suche, SRT-Extraktion.</li>
-<li><strong>Lesezeichen &amp; Playlists</strong> &mdash; M3U, Fortsetzung.</li>
-<li><strong>Anpassung</strong> &mdash; Tastenk&uuml;rzel, 9-Band-EQ, Timer.</li>
-</ul>
-<p><em>Vollst&auml;ndige Beschreibung auf Arabisch oder Englisch.</em></p>
+<div class="learn-more-wrap">
+  <a href="docs.html" class="learn-more">Learn more about the app <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </div>
-
-<div class="lang-block-it" lang="it">
-<h3>&#127916; playAbility Pro: uno studio completo in una sola app</h3>
-<p>playAbility Pro combina <strong>10 strumenti professionali</strong> in un unica applicazione leggera e accessibile.</p>
-<ul>
-<li><strong>Motore MPV</strong> &mdash; accelerazione GPU, amplificazione 400%, fotogramma.</li>
-<li><strong>Taglio senza perdita</strong> &mdash; marcatura A/B, cestino, fusione.</li>
-<li><strong>YouTube integrato</strong> &mdash; ricerca, download 144p-1080p, WAV/FLAC/MP3.</li>
-<li><strong>Capitoli</strong> &mdash; navigazione e suddivisione.</li>
-<li><strong>Radio mondiale</strong> &mdash; migliaia di stazioni, registrazione, programmazione.</li>
-<li><strong>Accessibilit&agrave;</strong> &mdash; compatibile NVDA, sintesi vocale.</li>
-<li><strong>Sottotitoli</strong> &mdash; ricerca auto, estrazione SRT.</li>
-<li><strong>Segnalibri &amp; playlist</strong> &mdash; M3U, ripristino.</li>
-<li><strong>Personalizzazione</strong> &mdash; scorciatoie, EQ 9 bande, timer.</li>
-</ul>
-<p><em>Vedi versione araba o inglese per la descrizione completa.</em></p>
-</div>
-
-<div class="lang-block-es" lang="es">
-<h3>&#127916; playAbility Pro: un estudio completo en una sola app</h3>
-<p>playAbility Pro combina <strong>10 herramientas profesionales</strong> en una aplicaci&oacute;n ligera y accesible.</p>
-<ul>
-<li><strong>Motor MPV</strong> &mdash; aceleraci&oacute;n GPU, amplificaci&oacute;n 400%, fotograma.</li>
-<li><strong>Corte sin p&eacute;rdida</strong> &mdash; marcado A/B, cesta, fusi&oacute;n.</li>
-<li><strong>YouTube integrado</strong> &mdash; b&uacute;squeda, descarga 144p-1080p, WAV/FLAC/MP3.</li>
-<li><strong>Cap&iacute;tulos</strong> &mdash; navegaci&oacute;n y divisi&oacute;n.</li>
-<li><strong>Radio mundial</strong> &mdash; miles de estaciones, grabaci&oacute;n, programaci&oacute;n.</li>
-<li><strong>Accesibilidad</strong> &mdash; compatible NVDA, s&iacute;ntesis de voz.</li>
-<li><strong>Subt&iacute;tulos</strong> &mdash; b&uacute;squeda auto, extracci&oacute;n SRT.</li>
-<li><strong>Marcadores &amp; listas</strong> &mdash; M3U, reanudaci&oacute;n.</li>
-<li><strong>Personalizaci&oacute;n</strong> &mdash; atajos, EQ 9 bandas, temporizador.</li>
-</ul>
-<p><em>Versi&oacute;n completa en &aacute;rabe o ingl&eacute;s.</em></p>
-</div>
-
-<div class="lang-block-tr" lang="tr">
-<h3>&#127916; playAbility Pro: tek uygulamada tam bir st&uuml;dyo</h3>
-<p>playAbility Pro <strong>10 profesyonel arac&imath;</strong> tek bir hafif ve eri&sect;ilebilir uygulamada birle&sect;tirir.</p>
-<ul>
-<li><strong>MPV Motoru</strong> &mdash; GPU h&imath;zland&imath;rma, %400 amplifikasyon, kare kare.</li>
-<li><strong>Kay&imath;ps&imath;z K&imath;rpma</strong> &mdash; A/B i&sect;aretleme, sepet, birle&sect;tirme.</li>
-<li><strong>Entegre YouTube</strong> &mdash; arama, indirme 144p-1080p, WAV/FLAC/MP3.</li>
-<li><strong>B&ouml;l&uuml;m Y&ouml;netimi</strong> &mdash; gezinme ve b&ouml;lme.</li>
-<li><strong>D&uuml;nya Radyosu</strong> &mdash; binlerce istasyon, kay&imath;t, zamanlama.</li>
-<li><strong>Eri&sect;ilebilirlik</strong> &mdash; NVDA uyumlu, sesli sentez.</li>
-<li><strong>Altyaz&imath;lar</strong> &mdash; otomatik arama, SRT &ccedil;&imath;karma.</li>
-<li><strong>Yer &Imacr;&sect;aretleri &amp; Listeler</strong> &mdash; M3U, devam.</li>
-<li><strong>Ki&sect;iselle&sect;tirme</strong> &mdash; k&imath;sayollar, 9 bant EQ, zamanlay&imath;c&imath;.</li>
-</ul>
-<p><em>Tam a&ccedil;&imath;klama i&ccedil;in Arap&ccedil;a veya &Idot;ngilizce s&uuml;r&uuml;me bak&imath;n.</em></p>
 </div>
 
       </div>
@@ -484,13 +369,8 @@
 
   <script>
 var LANG = {
-  ar:{nav_home:'الرئيسي',nav_about:'عن البرنامج',nav_download:'التحميل',nav_contact:'التواصل',hero_sub:'مشغل ميديا، استوديو مونتاج، يوتيوب، راديو، وأكثر — في برنامج واحد',about_t1:'عن',about_t2:'البرنامج',dl_t1:'تحميل',dl_t2:'البرنامج',dl_btn:'📥 تحميل أحدث إصدار',dl_chk:'جاري التحقق من أحدث إصدار...',dl_note:'البرنامج يدعم التحديث التلقائي — نزّل المثبت مرة واحدة فقط!',ct_t1:'تواصل',ct_t2:'معنا',ct_sub:'للأسئلة والاستفسارات والمقترحات، تواصل معنا عبر:',ct_per:'تيليجرام شخصي',ct_grp:'جروب تيليجرام',footer:'\u00a9 2026 playAbility Pro. جميع الحقوق محفوظة.'},
-  en:{nav_home:'Home',nav_about:'About',nav_download:'Download',nav_contact:'Contact',hero_sub:'Media player, editing studio, YouTube, radio & more \u2014 in one app',about_t1:'About',about_t2:'the App',dl_t1:'Download',dl_t2:'the App',dl_btn:'\u2913 Download Latest Release',dl_chk:'Checking latest version...',dl_note:'Auto-update supported \u2014 download the installer once!',ct_t1:'Contact',ct_t2:'Us',ct_sub:'For questions, feedback or suggestions, reach us via:',ct_per:'Personal Telegram',ct_grp:'Telegram Group',footer:'\u00a9 2026 playAbility Pro. All rights reserved.'},
-  fr:{nav_home:'Accueil',nav_about:'A propos',nav_download:'Telecharger',nav_contact:'Contact',hero_sub:'Lecteur multimedia, studio, YouTube, radio & plus dans une seule app',about_t1:'A propos',about_t2:"de l'app",dl_t1:'Telecharger',dl_t2:"l'app",dl_btn:'\u2913 Telecharger derniere version',dl_chk:'Verification de la derniere version...',dl_note:'Mise a jour automatique, telechargez une seule fois!',ct_t1:'Contact',ct_t2:'ez-nous',ct_sub:'Pour questions, feedback ou suggestions, contactez-nous via:',ct_per:'Telegram personnel',ct_grp:'Groupe Telegram',footer:'\u00a9 2026 playAbility Pro. Tous droits reserves.'},
-  de:{nav_home:'Start',nav_about:'Uber',nav_download:'Download',nav_contact:'Kontakt',hero_sub:'Media-Player, Schnittstudio, YouTube, Radio & mehr in einer App',about_t1:'Uber',about_t2:'die App',dl_t1:'Download',dl_t2:'der App',dl_btn:'\u2913 Neueste Version herunterladen',dl_chk:'Pruefe auf neueste Version...',dl_note:'Automatische Updates, Installer nur einmal herunterladen!',ct_t1:'Kontakt',ct_t2:'aufnehmen',ct_sub:'Fragen, Feedback oder Vorschlaege? Kontaktiere uns via:',ct_per:'Persoenliches Telegram',ct_grp:'Telegram-Gruppe',footer:'\u00a9 2026 playAbility Pro. Alle Rechte vorbehalten.'},
-  it:{nav_home:'Home',nav_about:'Informazioni',nav_download:'Scarica',nav_contact:'Contatto',hero_sub:'Lettore multimediale, studio, YouTube, radio & altro in una app',about_t1:'Informazioni',about_t2:"sull'app",dl_t1:'Scarica',dl_t2:"l'app",dl_btn:'\u2913 Scarica ultima versione',dl_chk:'Controllo ultima versione...',dl_note:'Aggiornamento automatico, scarica l\'installer una volta!',ct_t1:'Contatt',ct_t2:'aci',ct_sub:'Domande, feedback o suggerimenti? Contattaci via:',ct_per:'Telegram personale',ct_grp:'Gruppo Telegram',footer:'\u00a9 2026 playAbility Pro. Tutti i diritti riservati.'},
-  es:{nav_home:'Inicio',nav_about:'Acerca de',nav_download:'Descargar',nav_contact:'Contacto',hero_sub:'Reproductor, estudio, YouTube, radio y mas en una sola app',about_t1:'Acerca de',about_t2:'la App',dl_t1:'Descargar',dl_t2:'la App',dl_btn:'\u2913 Descargar ultima version',dl_chk:'Verificando ultima version...',dl_note:'Actualizacion automatica, descarga el instalador una vez!',ct_t1:'Contact',ct_t2:'o',ct_sub:'Preguntas, comentarios o sugerencias? Contactanos via:',ct_per:'Telegram personal',ct_grp:'Grupo de Telegram',footer:'\u00a9 2026 playAbility Pro. Todos los derechos reservados.'},
-  tr:{nav_home:'Ana Sayfa',nav_about:'Hakkinda',nav_download:'Indir',nav_contact:'Iletisim',hero_sub:'Medya oynatici, duzenleme studyosu, YouTube, radyo & dahasi tek uygulamada',about_t1:'Hakkinda',about_t2:'Uygulama',dl_t1:'Indir',dl_t2:'Uygulamayi',dl_btn:'\u2913 Son Surumu Indir',dl_chk:'Son surum kontrol ediliyor...',dl_note:'Otomatik guncelleme desteklenir, yukleyiciyi bir kez indirin!',ct_t1:'Iletis',ct_t2:'im',ct_sub:'Sorular, geri bildirim veya oneriler icin bize ulasin:',ct_per:'Kisisel Telegram',ct_grp:'Telegram Grubu',footer:'\u00a9 2026 playAbility Pro. Tum haklari saklidir.'}
+  ar:{nav_home:'الرئيسي',nav_about:'عن البرنامج',nav_docs:'التوثيق',nav_download:'التحميل',nav_contact:'التواصل',hero_sub:'مشغل ميديا، استوديو مونتاج، يوتيوب، راديو، وأكثر — في برنامج واحد',about_t1:'عن',about_t2:'البرنامج',dl_t1:'تحميل',dl_t2:'البرنامج',dl_btn:'\u2913 تحميل أحدث إصدار',dl_chk:'جاري التحقق من أحدث إصدار...',dl_note:'البرنامج يدعم التحديث التلقائي — نزّل المثبت مرة واحدة فقط!',ct_t1:'تواصل',ct_t2:'معنا',ct_sub:'للأسئلة والاستفسارات والمقترحات، تواصل معنا عبر:',ct_per:'تيليجرام شخصي',ct_grp:'جروب تيليجرام',footer:'\u00a9 2026 playAbility Pro. جميع الحقوق محفوظة.'},
+  en:{nav_home:'Home',nav_about:'About',nav_docs:'Documentation',nav_download:'Download',nav_contact:'Contact',hero_sub:'Media player, editing studio, YouTube, radio & more \u2014 in one app',about_t1:'About',about_t2:'the App',dl_t1:'Download',dl_t2:'the App',dl_btn:'\u2913 Download Latest Release',dl_chk:'Checking latest version...',dl_note:'Auto-update supported \u2014 download the installer once!',ct_t1:'Contact',ct_t2:'Us',ct_sub:'For questions, feedback or suggestions, reach us via:',ct_per:'Personal Telegram',ct_grp:'Telegram Group',footer:'\u00a9 2026 playAbility Pro. All rights reserved.'}
 };
 var curLang='ar',dlUrl='',dlReady=false;
 
@@ -509,7 +389,7 @@ function switchLang(l){
   var v=document.getElementById('versionDisplay');
   if(v.getAttribute('data-version')){
     var ver=v.getAttribute('data-version');
-    var pfx={ar:'احدث اصدار: ',fr:'Derniere version: ',de:'Neueste Version: ',it:'Ultima versione: ',es:'Ultima version: ',tr:'Son surum: '};
+    var pfx={ar:'احدث اصدار: '};
     v.textContent=(pfx[l]||'Latest version: ')+ver;
   }
 }
@@ -546,7 +426,7 @@ x.onload=function(){
       dlUrl=assets[0].browser_download_url;dlReady=true;
       if(ver){
         vd.setAttribute('data-version',ver);
-        var pfx={ar:'احدث اصدار: ',fr:'Derniere version: ',de:'Neueste Version: ',it:'Ultima versione: ',es:'Ultima version: ',tr:'Son surum: '};
+        var pfx={ar:'احدث اصدار: '};
         vd.textContent=(pfx[curLang]||'Latest version: ')+ver;
       }
     }
